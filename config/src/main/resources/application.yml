@@ -1,8 +1,23 @@
+info:
+  app:
+    name: config-server
+    version: 1.0
+
 server:
-  port: 8008
+  port: 8001
+
 spring:
   application:
-    name: gateway-server
+    # 应用名称
+    name: transfer-config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 远程仓库地址
+          uri: https://github.com/huharden/myShopingMarcket.git
+          # 相对搜索位置，可配置多个
+          search-paths: config-repo
 
 eureka:
   client:
@@ -11,7 +26,7 @@ eureka:
     # 缓存清单每隔30秒跟新一次
     registry-fetch-interval-seconds: 10
   instance:
-    hostname: transfer-gateway
+    hostname: transfer-config-server
     # 实例使用ip进行访问
     prefer-ip-address: true
     # 实例显示id
@@ -20,10 +35,3 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     # 服务失效时间，默认90秒
     lease-expiration-duration-in-seconds: 20
-
-zuul:
-  sensitiveHeaders: x-access-token,token
-  routes:
-    api:
-      path: /api/*
-      serviceId: eurekaclient
