@@ -17,6 +17,7 @@
         <module>config</module>
         <module>elasticSearch</module>
         <module>module</module>
+        <module>eureka</module>
     </modules>
 
     <parent>

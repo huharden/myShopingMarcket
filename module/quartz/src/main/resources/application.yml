@@ -1,27 +1,31 @@
+info:
+  app:
+    name: shopping-quartz
+    version: 1.0
+
 server:
-  port: 8082
+  port: 8220
+  context-path: /
+
 spring:
+  application:
+    # 应用名称
+    name: shopping-quartz
+  # 环境 dev|test|pro
   profiles:
     active: dev
-  #thymeleaf模板配置
-  thymeleaf:
-    cache: false
-    prefix: classpath:/templates/
-    suffix: .html
-    encoding: utf-8
-    content-type: text/html
-  resources:
-    chain:
-      strategy:
-        content:
-          paths: /**
-          enabled: true
-#加载mybatis文件xml
-mybatis:
-  configuration:
-    mapUnderscoreToCamelCase: true
-logging:
-  level:
-    com:
-      tiku:
-        dao: debug
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8000/eureka/
+
+
+# Feign 开启 Hystrix
+feign:
+  hystrix:
+    enabled: true
+  httpclient:
+    connection-timeout: 5000
+
+
