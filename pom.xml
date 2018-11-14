@@ -18,6 +18,7 @@
         <module>elasticSearch</module>
         <module>module</module>
         <module>eureka</module>
+        <module>common</module>
     </modules>
 
     <parent>
