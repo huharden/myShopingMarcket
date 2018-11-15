@@ -1,8 +1,6 @@
-package com.muf.shopping.base.utils;
+package com.muf.shopping.admin.base.utils;
 
 import java.util.*;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 

@@ -1,0 +1,15 @@
+server:
+  port: 8270
+  context-path: /
+
+spring:
+  application:
+    name: shopping-admin
+  # 区分环境：开发环境dev
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@localhost:8000/eureka/

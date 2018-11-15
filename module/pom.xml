@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>quartz</module>
+        <module>admin</module>
     </modules>
 
 

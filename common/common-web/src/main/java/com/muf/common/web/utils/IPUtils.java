@@ -1,6 +1,6 @@
 package com.muf.common.web.utils;
 
-import com.muf.shopping.base.utils.StringUtils;
+import com.muf.shopping.admin.base.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,4 +1,4 @@
-package com.muf.shopping.base.constant;
+package com.muf.shopping.admin.base.constant;
 
 /**
  * description: 统一业务代码，方便维护
