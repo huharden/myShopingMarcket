@@ -34,6 +34,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 声明式服务调用  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
         <!--熔断器 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
