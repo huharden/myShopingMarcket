@@ -19,4 +19,4 @@ shiro:
   anon:
     path:
     # spring cloud 健康检查
-    - /info
+    - /login

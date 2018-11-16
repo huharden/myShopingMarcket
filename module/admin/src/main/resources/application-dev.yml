@@ -14,7 +14,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-        url: jdbc:mysql://10.0.98.6:3306/hqets1809?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        url: jdbc:mysql://10.0.98.6:3306/mustang_transfer?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
         password: root
         username: root
         driver-class-name: com.mysql.jdbc.Driver
