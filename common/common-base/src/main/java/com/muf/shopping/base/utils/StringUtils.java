@@ -1,4 +1,4 @@
-package com.muf.shopping.admin.base.utils;
+package com.muf.shopping.base.utils;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,7 +1,7 @@
 package com.muf.common.web.utils;
 
 import com.muf.common.web.model.UserDetails;
-import com.muf.shopping.admin.base.constant.Constant;
+import com.muf.shopping.base.constant.Constant;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;

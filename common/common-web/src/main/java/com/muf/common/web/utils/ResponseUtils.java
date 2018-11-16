@@ -1,7 +1,7 @@
 package com.muf.common.web.utils;
 
-import com.muf.shopping.admin.base.utils.JsonUtil;
-import com.muf.shopping.admin.base.utils.R;
+import com.muf.shopping.base.utils.JsonUtil;
+import com.muf.shopping.base.utils.R;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 

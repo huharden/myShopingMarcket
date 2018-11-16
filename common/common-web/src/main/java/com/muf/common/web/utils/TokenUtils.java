@@ -4,8 +4,8 @@ package com.muf.common.web.utils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
-import com.muf.shopping.admin.base.constant.Constant;
-import com.muf.shopping.admin.base.exception.RRException;
+import com.muf.shopping.base.constant.Constant;
+import com.muf.shopping.base.exception.RRException;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 

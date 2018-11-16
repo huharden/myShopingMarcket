@@ -1,4 +1,4 @@
-package com.muf.shopping.admin.base.utils;
+package com.muf.shopping.base.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

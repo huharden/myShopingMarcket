@@ -1,7 +1,7 @@
-package com.muf.shopping.admin.base.utils;
+package com.muf.shopping.base.utils;
 
 
-import com.muf.shopping.admin.base.constant.StatusCode;
+import com.muf.shopping.base.constant.StatusCode;
 
 import java.util.HashMap;
 

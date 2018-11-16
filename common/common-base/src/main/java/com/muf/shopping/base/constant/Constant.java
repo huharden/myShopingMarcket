@@ -1,6 +1,6 @@
-package com.muf.shopping.admin.base.constant;
+package com.muf.shopping.base.constant;
 
-import com.muf.shopping.admin.base.utils.StringUtils;
+import com.muf.shopping.base.utils.StringUtils;
 
 /**
  * Description:

@@ -1,7 +1,7 @@
-package com.muf.shopping.admin.base.exception;
+package com.muf.shopping.base.exception;
 
 
-import com.muf.shopping.admin.base.constant.StatusCode;
+import com.muf.shopping.base.constant.StatusCode;
 
 /**
  * 自定义异常
