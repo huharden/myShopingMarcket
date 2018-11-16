@@ -1,7 +1,7 @@
 package com.muf.quartz.feign;
 
 import com.muf.quartz.feign.impl.FeignTestImpl;
-import com.muf.shopping.base.constant.Constant;
+import com.muf.shopping.common.base.constant.Constant;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

@@ -3,8 +3,8 @@ package com.muf.shopping.admin.service.impl;
 import com.muf.shopping.admin.dao.ShiroDao;
 import com.muf.shopping.admin.dto.LoginUserDTO;
 import com.muf.shopping.admin.service.ShiroService;
-import com.muf.shopping.base.constant.SystemId;
-import com.muf.shopping.base.utils.StringUtils;
+import com.muf.shopping.common.base.constant.SystemId;
+import com.muf.shopping.common.base.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

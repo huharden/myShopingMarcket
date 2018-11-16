@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hqjy.mustang.admin.dao.ShiroDao">
+<mapper namespace="com.muf.shopping.admin.dao.ShiroDao">
 
     <!-- 用户表表基本列 -->
     <sql id="SysUser_Column_List">
@@ -15,7 +15,7 @@
     </sql>
 
     <!-- 电话号码查询用户信息 -->
-    <select id="findByPhone" resultType="com.hqjy.mustang.admin.model.dto.LoginUserDTO">
+    <select id="findByPhone" resultType="com.muf.shopping.admin.dto.LoginUserDTO">
         select
         <include refid="SysUser_Column_List"/>
         from sys_user
@@ -23,7 +23,7 @@
     </select>
 
     <!-- 根据用户Id，查询用户 -->
-    <select id="findByUserId" resultType="com.hqjy.mustang.admin.model.dto.LoginUserDTO">
+    <select id="findByUserId" resultType="com.muf.shopping.admin.dto.LoginUserDTO">
         select
         <include refid="SysUser_Column_List"/>
         from sys_user

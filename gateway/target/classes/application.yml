@@ -25,5 +25,5 @@ zuul:
   sensitiveHeaders: x-access-token,token
   routes:
     api:
-      path: /api/*
+      path: /api/**
       serviceId: eurekaclient

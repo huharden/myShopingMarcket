@@ -1,7 +1,7 @@
 package com.muf.shopping.admin.api;
 
 
-import com.muf.shopping.base.constant.Constant;
+import com.muf.shopping.common.base.constant.Constant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

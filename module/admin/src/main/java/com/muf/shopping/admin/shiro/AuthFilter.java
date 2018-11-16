@@ -1,14 +1,14 @@
 package com.muf.shopping.admin.shiro;
 
-import com.muf.common.web.shiro.AuthToken;
-import com.muf.common.web.utils.ResponseUtils;
-import com.muf.common.web.utils.TokenUtils;
+import com.muf.shopping.common.web.shiro.AuthToken;
+import com.muf.shopping.common.web.utils.ResponseUtils;
+import com.muf.shopping.common.web.utils.TokenUtils;
 import com.muf.shopping.admin.dto.LoginUserDTO;
-import com.muf.shopping.base.constant.Constant;
-import com.muf.shopping.base.constant.StatusCode;
-import com.muf.shopping.base.utils.R;
-import com.muf.shopping.redis.utils.RedisKeys;
-import com.muf.shopping.redis.utils.RedisUtils;
+import com.muf.shopping.common.base.constant.Constant;
+import com.muf.shopping.common.base.constant.StatusCode;
+import com.muf.shopping.common.base.utils.R;
+import com.muf.shopping.common.redis.utils.RedisKeys;
+import com.muf.shopping.common.redis.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * description: 
  * @author: hutao
- * @date 2018/11/16 16:21 
+ * @date 2018/11/16 16:33
  */
 @Slf4j
 public class AuthFilter extends AccessControlFilter {

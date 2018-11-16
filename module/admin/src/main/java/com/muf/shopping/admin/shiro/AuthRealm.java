@@ -1,13 +1,13 @@
 package com.muf.shopping.admin.shiro;
 
 import com.google.gson.reflect.TypeToken;
-import com.muf.common.web.model.UserDetails;
-import com.muf.common.web.shiro.AuthToken;
+import com.muf.shopping.common.web.model.UserDetails;
+import com.muf.shopping.common.web.shiro.AuthToken;
 import com.muf.shopping.admin.service.ShiroService;
-import com.muf.shopping.base.utils.JsonUtil;
-import com.muf.shopping.base.utils.StringUtils;
-import com.muf.shopping.redis.utils.RedisKeys;
-import com.muf.shopping.redis.utils.RedisUtils;
+import com.muf.shopping.common.base.utils.JsonUtil;
+import com.muf.shopping.common.base.utils.StringUtils;
+import com.muf.shopping.common.redis.utils.RedisKeys;
+import com.muf.shopping.common.redis.utils.RedisUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

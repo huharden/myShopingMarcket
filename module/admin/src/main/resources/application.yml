@@ -13,3 +13,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:123456@localhost:8000/eureka/
+
+# shiro 不拦截路径
+shiro:
+  anon:
+    path:
+    # spring cloud 健康检查
+    - /info
