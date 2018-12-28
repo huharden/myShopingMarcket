@@ -48,7 +48,7 @@ public class LoginServiceImpl implements LoginService {
         user.setToken(token);
         user.setJti(TokenUtils.tokenInfo(token, Constant.JWT_ID, String.class));
         // user.setAvatar(Optional.ofNullable(user.getAvatar()).map(s -> OSSFactory.ali().generatePresignedUrl(s, 86400)).orElse(null));
-        //用户信息放入redis中dddd
+        //用户信息放入redis中
         redisUtils.set(RedisKeys.User.token(user.getUserId()), user, TokenUtils.getProlong());
         //清除用户授权缓存
         redisUtils.delete(RedisKeys.User.perm(user.getUserId()));
