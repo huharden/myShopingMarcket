@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -130,6 +131,15 @@ public class RedisUtils {
         return keys.toString();
     }
 
+    //模糊查询key
+    public String fuzzyKey(String key) {
+        Set<String> keySet = redisTemplate.keys(key + "*");
+        Iterator iter = keySet.iterator();
+        while (iter.hasNext()) {
+            return iter.next().toString();
+        }
+        return "";
+    }
     /**
      * 获取以key为前缀的所有key
      */

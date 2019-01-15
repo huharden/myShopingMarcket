@@ -5,6 +5,8 @@ import com.muf.quartz.service.QuartzTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * Description:
  * Autor: hutao
@@ -12,11 +14,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class QuartzTestServiceImpl implements QuartzTestService {
+
     @Autowired
     private QuartzTestMapper quartzTestMapper;
 
     @Override
     public String testDemo(){
         return quartzTestMapper.testDemo();
+
     }
 }
