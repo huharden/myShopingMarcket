@@ -1,6 +1,6 @@
 spring:
   redis:
-      database: 10
+      database: 1
       host: 123.207.27.144
       port: 6379
       password:       # 密码（默认为空）
@@ -10,6 +10,7 @@ spring:
         max-wait: -1      # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-idle: 10      # 连接池中的最大空闲连接
         min-idle: 5       # 连接池中的最小空闲连接
+      ws-topic-name: myShopingMarket_test #websocket推送redis主题的名称
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource

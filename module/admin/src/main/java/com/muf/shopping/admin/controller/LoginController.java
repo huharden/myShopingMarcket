@@ -29,7 +29,7 @@ public class LoginController{
      */
     @PostMapping(value = "/login")
     public Map<String, Object> login(@RequestBody LoginUserDTO userDTO) {
-           String key = "12";
+           String key = "mytest";
            String redisString = null;
            if(StringUtils.isEmpty(redisString)){
                 redisUtils.set(key, "12455");
