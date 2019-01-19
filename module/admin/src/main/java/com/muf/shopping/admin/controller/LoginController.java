@@ -29,10 +29,10 @@ public class LoginController{
      */
     @PostMapping(value = "/login")
     public Map<String, Object> login(@RequestBody LoginUserDTO userDTO) {
-           String key = "mytest";
+           String key = "mytesta";
            String redisString = null;
            if(StringUtils.isEmpty(redisString)){
-                redisUtils.set(key, "12455");
+                redisUtils.set(key, "1245aa5");
            }
         //验证用户登录
         LoginUserDTO user = loginService.getUserByPhone(userDTO.getPhone(), userDTO.getPassword());
