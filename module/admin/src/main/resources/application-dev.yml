@@ -1,8 +1,8 @@
 spring:
   redis:
       database: 10
-      host: 10.0.98.9
-      port: 6385
+      host: 123.207.27.144
+      port: 6379
       password:       # 密码（默认为空）
       timeout: 15000  # 连接超时时长（毫秒）
       pool:

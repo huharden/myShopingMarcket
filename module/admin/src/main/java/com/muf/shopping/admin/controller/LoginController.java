@@ -26,7 +26,7 @@ public class LoginController{
     /**
      * 登录
      */
-       @PostMapping(value = "/login")
+    @PostMapping(value = "/login")
     public Map<String, Object> login(@RequestBody LoginUserDTO userDTO) {
            String key = "12";
            if("".equals(redisUtils.fuzzyKey(key))){
