@@ -4,6 +4,7 @@ package com.muf.shopping.admin.controller;
 import com.muf.shopping.admin.dto.LoginUserDTO;
 import com.muf.shopping.admin.service.LoginService;
 import com.muf.shopping.common.base.utils.R;
+import com.muf.shopping.common.base.utils.StringUtils;
 import com.muf.shopping.common.redis.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,8 @@ public class LoginController{
     @PostMapping(value = "/login")
     public Map<String, Object> login(@RequestBody LoginUserDTO userDTO) {
            String key = "12";
-           if("".equals(redisUtils.fuzzyKey(key))){
+           String redisString = null;
+           if(StringUtils.isEmpty(redisString)){
                 redisUtils.set(key, "12455");
            }
         //验证用户登录
