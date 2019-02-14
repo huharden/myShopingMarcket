@@ -30,7 +30,7 @@ public class LoginController{
     @PostMapping(value = "/login")
     public Map<String, Object> login(@RequestBody LoginUserDTO userDTO) {
            String key = "mytesta";
-           String redisString = null;
+           String redisString = redisUtils.get(key);
            if(StringUtils.isEmpty(redisString)){
                 redisUtils.set(key, "1245aa5");
            }
