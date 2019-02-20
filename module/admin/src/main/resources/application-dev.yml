@@ -44,3 +44,12 @@ spring:
           wall:
             config:
               multi-statement-allow: true
+  rabbitmq:
+    host: 10.0.99.111
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /
+    acknowledge-mode: manual
+    publisher-confirms: true
+
