@@ -16,7 +16,7 @@ public class RabbitConstant  {
     public final static String RK_TRANSACTION = "transaction";
     public final static String RK_CONTRACT = "contract";
     public final static String RK_QUALIFICATION = "qualification";
-    public final static String EXCHANGE= "qualification";
+
 
 
 }

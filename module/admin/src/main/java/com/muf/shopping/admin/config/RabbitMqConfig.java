@@ -1,10 +1,7 @@
 package com.muf.shopping.admin.config;
 
 import com.muf.shopping.admin.constant.RabbitConstant;
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -45,9 +42,13 @@ public class RabbitMqConfig {
      *
      * @return
      */
-    @Bean
+   /* @Bean
     DirectExchange directExchange() {
         return new DirectExchange(RabbitConstant.EXCHANGE);
+    }*/
+    @Bean
+    public TopicExchange exchange() {
+        return new TopicExchange(RabbitConstant.SYS_USER_QUEUE_NAME);
     }
 
     /**
@@ -56,8 +57,8 @@ public class RabbitMqConfig {
      * @return
      */
     @Bean
-    public Binding bindingTransaction() {
-        return BindingBuilder.bind(queueTransaction()).to(directExchange()).with(RabbitConstant.RK_TRANSACTION);
+    public Binding bindingTransaction(Queue queueTransaction, TopicExchange exchange) {
+        return BindingBuilder.bind(queueTransaction).to(exchange).with(RabbitConstant.RK_TRANSACTION);
     }
 
     /**
@@ -66,8 +67,8 @@ public class RabbitMqConfig {
      * @return
      */
     @Bean
-    public Binding bindingContract() {
-        return BindingBuilder.bind(queueContract()).to(directExchange()).with(RabbitConstant.RK_CONTRACT);
+    public Binding bindingQueueContract(Queue queueContract, TopicExchange exchange) {
+        return BindingBuilder.bind(queueContract).to(exchange).with(RabbitConstant.QUEUE_CONTRACT);
     }
 
     /**
@@ -76,8 +77,8 @@ public class RabbitMqConfig {
      * @return
      */
     @Bean
-    public Binding bindingQualification() {
-        return BindingBuilder.bind(queueQualification()).to(directExchange()).with(RabbitConstant.RK_QUALIFICATION);
+    public Binding bindingQueueQualification(Queue queueQualification, TopicExchange exchange) {
+        return BindingBuilder.bind(queueQualification).to(exchange).with(RabbitConstant.QUEUE_QUALIFICATION);
     }
 
 }

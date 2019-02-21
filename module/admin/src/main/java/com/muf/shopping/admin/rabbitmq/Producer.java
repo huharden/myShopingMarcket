@@ -47,11 +47,11 @@ public class Producer {
         json.put("displayName", args);
         //推送到队列
         try {
-            amqpTemplate.convertAndSend("mq-exchange", RabbitConstant.SYS_USER_QUEUE_NAME, json.toJSONString());
+            amqpTemplate.convertAndSend("exchange_test", RabbitConstant.RK_TRANSACTION, json.toJSONString());
         } catch (Exception e) {
             logger.error("["+ args +"]推送到im队列失败" + e.getMessage());
         }
-        return R.ok("displayName");
+        return R.ok("displayName"+json.toJSONString());
     }
 
 }
