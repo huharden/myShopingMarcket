@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2019-02-19-15:05
  */
 @RestController
-@RequestMapping("/rabbitMqCus")
 public class Customer {
 
     public final static String QueueName = "queue_transaction";
@@ -31,7 +30,6 @@ public class Customer {
                     )
             }
     )
-    @GetMapping("/customer")
     public void getRabbitMqQueue(String message) {
         System.out.println(message+"123");
     }
