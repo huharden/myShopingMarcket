@@ -4,3 +4,4 @@ spring:
   redis:
     host: 123.207.27.144
     port: 6379
+    database: 2

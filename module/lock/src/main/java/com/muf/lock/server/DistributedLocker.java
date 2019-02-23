@@ -1,5 +1,7 @@
 package com.muf.lock.server;
 
+import com.muf.lock.exception.UnableToAquireLockException;
+
 /**
  * Description:
  *
@@ -16,8 +18,8 @@ public interface DistributedLocker {
      * @throws UnableToAquireLockException
      * @throws Exception
      */
-    //<T> T lock(String resourceName, AquiredLockWorker<T> worker) throws UnableToAquireLockException, Exception;
+    <T> T lock(String resourceName, AquiredLockWorker<T> worker) throws UnableToAquireLockException, Exception;
 
-    //<T> T lock(String resourceName, AquiredLockWorker<T> worker, int lockTime) throws UnableToAquireLockException, Exception;
+    <T> T lock(String resourceName, AquiredLockWorker<T> worker, int lockTime) throws UnableToAquireLockException, Exception;
 
 }
