@@ -2,6 +2,8 @@ package com.muf.lock.controller;
 
 import com.muf.lock.server.AquiredLockWorker;
 import com.muf.lock.server.DistributedLocker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("redLock")
 public class RedLockController {
+
+    private static Logger logger = LoggerFactory.getLogger(RedLockController.class);
     @Autowired
     private DistributedLocker distributedLocker;
 
@@ -28,7 +32,7 @@ public class RedLockController {
                     System.out.println("执行方法！");
                     Thread.sleep(5000);
                 }catch (Exception e){
-                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
                 return null;
             }
