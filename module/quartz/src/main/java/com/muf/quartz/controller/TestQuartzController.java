@@ -5,13 +5,14 @@ import com.muf.quartz.feign.FeignTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Description:
  * Autor: hutao
  * Date: 2018-11-14-9:18
  */
-@Component
+@RestController
 public class TestQuartzController {
     @Autowired
     private QuartzTestMapper quartzTestMapper;
@@ -27,6 +28,9 @@ public class TestQuartzController {
             System.out.print("定时任务启动"+subjectId);
             Long userId = 123456L;
             feignTest.feignTest(userId);
+
+
+
         }
 
 
